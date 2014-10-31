@@ -4,14 +4,10 @@ Ext.define 'MyApp.controller.proxy.ProxyController',
 	requires: ['MyApp.view.proxy.Add']
 	addProxySetting: ->
 		# 弹出添加配置窗口
-		proxyaddwin = Ext.create "Ext.Window",
+		proxyaddwin = Ext.create "MyApp.view.proxy.Add",
 			modal : true
-			width: 500
-			height: 400
 			region: 'center'
-			title: '数据库代理'
-			layout: 'column'
-			items:[
-				xtype: 'proxyadd'
-			]
+			floating: true
+			closable : true
+			draggable: true
 		proxyaddwin.show()
