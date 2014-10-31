@@ -2,3 +2,6 @@
 /ext
 /images
 /node_modules
+/app
+/.sencha
+/sass
