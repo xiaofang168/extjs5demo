@@ -2,6 +2,7 @@ Ext.define 'MyApp.view.main.region.AccordionMainMenu',
 	extend : 'Ext.panel.Panel'
 	alias: 'widget.mainmenuaccordion'
 	title: '系统菜单'
+	width: 150
 	iconCls : ''
 	layout: 
 		type : 'accordion'
@@ -21,6 +22,7 @@ Ext.define 'MyApp.view.main.region.AccordionMainMenu',
 				dockedItems : [
 						dock : 'left'
 						xtype : 'toolbar'
+						width: @width
 						items : []
 				]
 				glyph : menugroup.glyph
