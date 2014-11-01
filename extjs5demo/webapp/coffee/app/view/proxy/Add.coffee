@@ -8,12 +8,12 @@ Ext.define 'MyApp.view.proxy.Add',
 	layout: 'form'
 	defaultType: 'textfield'
 	fieldDefaults:
-        labelSeparator :'：'#分隔符   
-        labelWidth: 70
-        labelAlign: 'left'
-        width:200
-        allowBlank : false #是否允许为空   
-        blankText : '不允许为空' 
+		labelSeparator :'：'#分隔符   
+		labelWidth: 70
+		labelAlign: 'left'
+		width:200
+		allowBlank : false #是否允许为空   
+		blankText : '不允许为空' 
 	items:[
 		xtype:'fieldset'
 		title: '被代理应用信息'
@@ -21,7 +21,7 @@ Ext.define 'MyApp.view.proxy.Add',
 		border:true
 		items:[
 			columnWidth:.35 #该列在整行中所占百分比  
-			#border:true 
+			border:false 
 			items:[
 				xtype:'textfield'
 				fieldLabel:'应用名称'
@@ -32,14 +32,16 @@ Ext.define 'MyApp.view.proxy.Add',
 				name:'app_name2'
 			]
 		,
-			columnWidth:.35 #该列在整行中所占百分比  
+			columnWidth:.35 #该列在整行中所占百分比
+			border:false
 			items: [
 				xtype:'textfield'
 				fieldLabel: 'ip地址'
 				name:'ip'
 			]
 		,
-			columnWidth:.28 #该列在整行中所占百分比  
+			columnWidth:.28 #该列在整行中所占百分比 
+			border:false
 			items: [
 				xtype:'textfield'
 				fieldLabel:'服务是否启用'
