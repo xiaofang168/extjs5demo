@@ -4,42 +4,48 @@ Ext.define 'MyApp.view.proxy.Add',
 	title: '添加数据库代理配置'
 	width: 800
 	height: 400
-	labelWidth:80
 	frame: true
+	layout: 'form'
+	defaultType: 'textfield'
+	fieldDefaults:
+        labelSeparator :'：'#分隔符   
+        labelWidth: 70
+        labelAlign: 'left'
+        width:200
+        allowBlank : false #是否允许为空   
+        blankText : '不允许为空' 
 	items:[
 		xtype:'fieldset'
-		anchor:'100%'
 		title: '被代理应用信息'
 		layout:'column'
-		columnWidth:.1
 		border:true
 		items:[
-			columnWidth:.4 #该列在整行中所占百分比  
-			layout:'form' #从上往下布局
-			border:true 
+			columnWidth:.35 #该列在整行中所占百分比  
+			#border:true 
 			items:[
 				xtype:'textfield'
-				fieldLabel : '应用名称'
+				fieldLabel:'应用名称'
 				name:'app_name'
-				width: 150
+			,
+				xtype:'textfield'
+				fieldLabel:'应用名称'
+				name:'app_name2'
 			]
 		,
-			columnWidth:.4 #该列在整行中所占百分比  
-			layout:'form' #从上往下布局
+			columnWidth:.35 #该列在整行中所占百分比  
 			items: [
 				xtype:'textfield'
-				fieldLabel : 'ip地址'
+				fieldLabel: 'ip地址'
 				name:'ip'
-				width: 300
 			]
 		,
-			columnWidth:.2 #该列在整行中所占百分比  
-			layout:'form' #从上往下布局
+			columnWidth:.28 #该列在整行中所占百分比  
 			items: [
 				xtype:'textfield'
-				fieldLabel : '服务是否启用'
+				fieldLabel:'服务是否启用'
 				name:'is_enable'
-				width: 100
+				labelWidth: 100
+				width: 140
 			]
 		]
 	]
