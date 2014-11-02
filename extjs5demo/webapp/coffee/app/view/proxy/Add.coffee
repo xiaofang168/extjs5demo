@@ -4,7 +4,8 @@ Ext.define 'MyApp.view.proxy.Add',
 	title: '添加数据库代理配置'
 	width: 800
 	height: 400
-	frame: true
+	frame: true # 渲染蓝色背景色并有边框
+	#bodyStyle: 'background-color:#dfe8f5;'
 	layout: 'form'
 	defaultType: 'textfield'
 	fieldDefaults:
@@ -17,11 +18,16 @@ Ext.define 'MyApp.view.proxy.Add',
 	items:[
 		xtype:'fieldset'
 		title: '被代理应用信息'
+		autoHeight:true
+		collapsible: true #是否为可折叠  
+		collapsed: false #默认是否折叠  
 		layout:'column'
 		border:true
 		items:[
-			columnWidth:.35 #该列在整行中所占百分比  
-			border:false 
+			columnWidth:.35 #该列在整行中所占百分比 
+			xtype: 'container'
+			frame: true
+			#border:false 
 			items:[
 				xtype:'textfield'
 				fieldLabel:'应用名称'
@@ -33,7 +39,9 @@ Ext.define 'MyApp.view.proxy.Add',
 			]
 		,
 			columnWidth:.35 #该列在整行中所占百分比
-			border:false
+			xtype: 'container'
+			frame: true
+			#border:false
 			items: [
 				xtype:'textfield'
 				fieldLabel: 'ip地址'
@@ -41,7 +49,9 @@ Ext.define 'MyApp.view.proxy.Add',
 			]
 		,
 			columnWidth:.28 #该列在整行中所占百分比 
-			border:false
+			xtype: 'container'
+			frame: true
+			#border:false
 			items: [
 				xtype:'textfield'
 				fieldLabel:'服务是否启用'
